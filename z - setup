@@ -1,0 +1,14 @@
+npx install create-react-app <app-name>
+
+npm install
+
+
+--npm install --save typescript @types/node @types/react-dom @types/jest
+
+change app.js to app.tsx
+change index.js to index.js
+
+npm start
+
+//tsconfig.json file should show up
+---install inner code best practices such as typing inspections
