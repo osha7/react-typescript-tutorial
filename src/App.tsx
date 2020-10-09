@@ -4,18 +4,30 @@ import logo from './logo.svg';
 import './App.css';
 import Message from './message'
 
+// const initialState = {
+//   name: 'Manny',
+//   message: 'Typescript is cool!'
+// }
 
-class App extends React.Component<any> {
+// type State = Readonly<typeof initialState>
+// Readonly: items that can only be read once created // can't change it
+
+// interfaces:  how shape of our data will look like and
+// the types of our properties
+// only used by compiler to check for types (right types for compiling)
+class App extends React.Component {
+// class App extends React.Component<any, State> {
+  // readonly state: State = initialState
   // ^pass a type to component could be <any> or <{}>
-  componentWillMount() {
-    // ^before (((this is out of date funciton)))
-    console.log('Almost There...')
-  }
+  // componentWillMount() {
+  //   // ^before (((this is out of date funciton)))
+  //   console.log('Almost There...')
+  // }
 
-  componentDidMount() {
-    // ^once mounted
-    console.log('Finally...hello!')
-  }
+  // componentDidMount() {
+  //   // ^once mounted
+  //   console.log('Finally...hello!')
+  // }
 
   render() {
     return (
@@ -23,8 +35,10 @@ class App extends React.Component<any> {
               <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
             
-                <Message/>
-            
+                {/* <Message name='Manny' message='This is a simple message' /> */}
+                <Message />
+                {/* <Message name={this.state.name} message={this.state.message} /> */}
+
               </header>
             </div>
           )
